@@ -425,7 +425,7 @@ L.Control.Elevation = L.Control.extend({
 				.style("text-anchor", "end")
 				.style("fill", "#000")
 				.style("font-weight", "700")
-				.text("m");
+				.text("km");
 		}
 	},
 
@@ -463,7 +463,7 @@ L.Control.Elevation = L.Control.extend({
 				.style("text-anchor", "end")
 				.style("fill", "#000")
 				.style("font-weight", "700")
-				.text("km");
+				.text("hr");
 		}
 	},
 
@@ -588,7 +588,7 @@ L.Control.Elevation = L.Control.extend({
 			} else {
 				this._mouseHeightFocusLabel.attr("x", layerpoint.x)
 					.attr("y", normalizedY)
-					.text(numY + " m")
+					.text(numY + " km/hr")
 					.style("visibility", "visible");
 			}
 		} else {
@@ -838,7 +838,7 @@ L.Control.Elevation = L.Control.extend({
 			.style("font-weight", "700");
 
 		this._focuslabelX
-			.text(numY + (opts.imperial ? " ft" : " m"))
+			.text(numY + (opts.imperial ? " ft" : " km/hr"))
 			.attr("x", xCoordinate + 10);
 		this._focuslabelY
 			.text(numX + (opts.imperial ? " mi" : " km"))
