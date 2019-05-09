@@ -1,3 +1,6 @@
+import L from 'leaflet';
+import * as d3 from 'd3';
+
 L.Control.Elevation = L.Control.extend({
 	options: {
 		position: "topright",
@@ -448,15 +451,24 @@ L.Control.Elevation = L.Control.extend({
 				.style("text-anchor", "end")
 				.text("mi");
 		} else {
+			var xAxis = this._x
+			var xAxisCall = d3.axisBottom()
+												.scale(xAxis)
+												.ticks(this.options.xTicks)
+
+			if (this.options.timeStampArray && this.options.timeStampArray.length) {
+				xAxis = d3.scaleTime().domain(d3.extent(opts.timeStampArray, (data) => {
+									return new Date(data);
+								})).range([0, this._width()])
+
+				xAxisCall = d3.axisBottom()
+											.scale(xAxis)
+			}
+
 			x
 				.attr("class", "x axis")
 				.attr("transform", "translate(0," + this._height() + ")")
-				.call(
-					d3
-					.axisBottom()
-					.scale(this._x)
-					.ticks(this.options.xTicks)
-				)
+				.call(xAxisCall)
 				.append("text")
 				.attr("x", this._width() + 6)
 				.attr("y", 30)
