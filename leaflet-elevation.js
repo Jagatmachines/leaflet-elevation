@@ -1,6 +1,3 @@
-import L from 'leaflet';
-import * as d3 from 'd3';
-
 L.Control.Elevation = L.Control.extend({
 	options: {
 		position: "topright",
