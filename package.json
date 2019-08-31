@@ -1,0 +1,24 @@
+{
+  "name": "leaflet-elevation-d3",
+  "version": "1.0.0",
+  "description": "leaflet elevation with d3 V4",
+  "main": "leaflet-elevation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jagatmachines/leaflet-elevation.git"
+  },
+  "keywords": [
+    "leaflet",
+    "elevation",
+    "d3"
+  ],
+  "author": "Jagatjyoti G Tuladhar <jagatmachines>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jagatmachines/leaflet-elevation/issues"
+  },
+  "homepage": "https://github.com/Jagatmachines/leaflet-elevation#readme"
+}
