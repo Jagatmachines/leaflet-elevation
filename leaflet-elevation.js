@@ -425,7 +425,7 @@ L.Control.Elevation = L.Control.extend({
 				.style("text-anchor", "end")
 				.style("fill", "#000")
 				.style("font-weight", "700")
-				.text("km");
+				.text("km/hr");
 		}
 	},
 
